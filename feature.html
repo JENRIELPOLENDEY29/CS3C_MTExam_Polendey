@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feature.html">Feature</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="Feature Logo" class="feature-logo">
+            <div>
+                <h2>Starboy Street wear</h2>
+                <p>Find the best deals on our top products.</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="product-grid">
+            <h3>Our Products</h3>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="assets/hoodie.jpeg" alt="Hoodie">
+                    <h4>Hoodie</h4>
+                    <p>$150</p>
+                    <button onclick="addToCart('Hoodie', 150)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/Jorts.jpeg" alt="Grey Pants Jorts">
+                    <h4>Grey Pants Jorts</h4>
+                    <p>$40</p>
+                    <button onclick="addToCart('Grey Pants Jorts', 40)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/Vans.jpeg" alt="Vans Shoes">
+                    <h4>Vans Shoes</h4>
+                    <p>$200</p>
+                    <button onclick="addToCart('Anta Shoes', 200)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/tshirt.jpeg" alt="Unisex T-shirt">
+                    <h4>Unisex T-shirt</h4>
+                    <p>$100</p>
+                    <button onclick="addToCart('Unisex T-shirt', 100)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart">
+            <h3>Shopping Cart</h3>
+            <ul id="cart-list"></ul>
+            <p>Total: $<span id="total-price">0</span></p>
+            <button class="back-btn" onclick="goBack()">Back</button>
+            <button class="checkout-btn" id="checkout-btn" onclick="checkout()" style="display: none;">Checkout</button>
+        </aside>
+
+    </main>
+
+    <div id="receipt-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReceipt()">&times;</span>
+            <h2>Receipt</h2>
+            <pre id="receipt-content"></pre>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 Jenriel Nick G. Polendey. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
